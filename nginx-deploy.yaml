@@ -12,6 +12,6 @@ spec:
         app: jenkins-demo
     spec:
       containers:
-      - image: harbor.box.com/nginx-helloworld:${build_tag}
+      - image: harbor.box.com/cicd/nginx-helloworld:${build_tag}
         imagePullPolicy: IfNotPresent
         name: jenkins-demo
