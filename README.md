@@ -1,2 +1,2 @@
-# jenkins-demo
-some demo project for jenkins
+# nginx-helloworld
+for cicd test .
