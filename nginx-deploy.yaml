@@ -11,6 +11,9 @@ spec:
       labels:
         app: jenkins-demo
     spec:
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+      - name: jenkins-cicd     
       containers:
       - image: harbor.box.com/cicd/nginx-helloworld:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
