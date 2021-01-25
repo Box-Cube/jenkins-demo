@@ -3,7 +3,7 @@ node ('boxcube') {
     echo "1.Git Clone"
    // git url: "https://github.com/Box-Cube/nginx-helloworld.git"
     script {
-        build_tag = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
+        build_tag = sh(returnStdout: true, script: 'echo v1').trim()
     }
     }
     stage('Build') {
