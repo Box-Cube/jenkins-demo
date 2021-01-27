@@ -18,3 +18,22 @@ spec:
       - image: harbor.box.com/cicd/nginx-helloworld:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
         name: jenkins-demo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: cicd-nginx-helloworld
+  name: cicd-nginx-helloworld
+  namespace: jenkins
+spec:
+  ports:
+  - name: 80-80
+    port: 80
+    protocol: TCP
+    targetPort: 80
+    nodePort: 30680
+  selector:
+    app: cicd-nginx-helloworld
+  type: NodePort
